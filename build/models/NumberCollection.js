@@ -8,11 +8,14 @@ class NumberCollection {
     get length() {
         return this.data.length;
     }
-    compare(left, right) {
-        return this.data[left] > this.data[right];
+    compare(leftIndex, rightIndex) {
+        return this.data[leftIndex] > this.data[rightIndex];
     }
-    swap(left, right) {
-        [this.data[left], this.data[right]] = [this.data[right], this.data[left]];
+    swap(leftIndex, rightIndex) {
+        [this.data[leftIndex], this.data[rightIndex]] = [
+            this.data[rightIndex],
+            this.data[leftIndex],
+        ];
     }
 }
 exports.NumberCollection = NumberCollection;
